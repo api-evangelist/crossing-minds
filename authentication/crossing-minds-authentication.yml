@@ -1,0 +1,45 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.api.crossingminds.com/authentication.html
+docs: https://docs.api.crossingminds.com/authentication.html
+summary:
+  types: [http]
+  http_scheme: bearer
+  bearer_format: JWT
+  standards: [RFC6750]
+  oauth2_flows: []
+  sso: [saml]
+description: >-
+  The Crossing Minds B2B Recommendation API uses short-lived JWT bearer
+  authentication (RFC 6750). Clients log in to obtain a JWT plus a refresh
+  token scoped to a specific account and database, then present the JWT in the
+  Authorization header. When the JWT expires, the refresh token is exchanged
+  for a new JWT (and, when near expiry, a new refresh token) without
+  re-submitting credentials.
+schemes:
+  - name: bearerAuth
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    header: 'Authorization: Bearer <JWT_TOKEN>'
+login_flows:
+  - name: individual
+    endpoint: POST login/individual/
+    credentials: [email, password]
+    optional: [db_id, db_name]
+  - name: service
+    endpoint: POST login/service/
+    credentials: [service_name, service_key]
+    optional: [db_id, db_name]
+    notes: Service accounts may hold multiple keys.
+  - name: sso-saml
+    endpoint: POST login/sso/saml/sp/
+    provider: OKTA
+    notes: SAML-based single sign-on.
+  - name: frontend-role
+    notes: >-
+      Login accepts frontend_user_id or frontend_session_id to restrict token
+      permissions to a specific end user or anonymous session.
+refresh:
+  endpoint: POST login/refresh-token/
+  returns: A new short-lived JWT, and a new refresh token when the current one is near expiry.
