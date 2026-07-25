@@ -1,8 +1,16 @@
 aid: crossing-minds
 name: Crossing Minds
-description: 'Crossing Minds is a company surfaced as a portfolio company of index-ventures, partech and
-  added to the API Evangelist network as a stub for enrichment. Sector: ai-ml. This profile is a lead
-  awaiting the enrichment pipeline.'
+description: >-
+  Crossing Minds is an AI personalization and recommendation company. Its B2B
+  Recommendation API delivers profile-to-items, session-to-items and
+  item-to-items recommendations computed from user ratings and interaction
+  events, exposed over a JWT-authenticated REST API with multi-tenant
+  organization accounts and isolated per-database datasets. Developers ingest
+  users and items (with typed properties) plus ratings and interactions in bulk,
+  configure recommendation scenarios, and query real-time recommendations for a
+  profile, an anonymous session, or a given item. First-party client SDKs ship
+  for Python, Node.js, .NET, Java, Ruby, PHP and browser JavaScript. The team
+  joined OpenAI; the API, documentation, SDKs and status page remain online.
 url: https://raw.githubusercontent.com/api-evangelist/crossing-minds/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,18 +19,102 @@ x-backed-by:
 - partech
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.crossingminds.com/favicon.ico
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
 - Ai Ml
-apis: []
+- Recommendations
+- Personalization
+- Machine Learning
+- Recommender System
+- Retrieval
+- Ecommerce
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Crossing Minds Recommendation API
+  description: >-
+    Universal B2B recommendation API — ingest users, items, ratings and
+    interactions, then query profile-to-items, session-to-items and
+    item-to-items recommendations. JWT authenticated, multi-database.
+  humanURL: https://docs.api.crossingminds.com/
+  baseURL: https://api.crossingminds.com
+  tags:
+  - Recommendations
+  - Personalization
+  - Machine Learning
+  properties:
+  - type: Documentation
+    url: https://docs.api.crossingminds.com/
+  - type: APIReference
+    url: https://docs.api.crossingminds.com/endpoints/index.html
+  - type: Authentication
+    url: authentication/crossing-minds-authentication.yml
+  - type: ErrorCatalog
+    url: errors/crossing-minds-error-codes.yml
+  - type: DataModel
+    url: data-model/crossing-minds-data-model.yml
 common:
+- type: DomainSecurity
+  url: security/crossing-minds-domain-security.yml
 - type: Website
-  url: http://crossingminds.com
+  url: https://www.crossingminds.com
+- type: DeveloperPortal
+  url: https://docs.api.crossingminds.com/
+- type: Documentation
+  url: https://docs.api.crossingminds.com/
+- type: APIReference
+  url: https://docs.api.crossingminds.com/endpoints/index.html
+- type: GettingStarted
+  url: https://docs.api.crossingminds.com/authentication.html
+- type: GitHubOrganization
+  url: https://github.com/Crossing-Minds
+- type: StatusPage
+  url: https://status.crossingminds.com/
+- type: Deprecation
+  url: lifecycle/crossing-minds-lifecycle.yml
+- type: Authentication
+  url: authentication/crossing-minds-authentication.yml
+- type: ErrorCatalog
+  url: errors/crossing-minds-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/crossing-minds-lifecycle.yml
+- type: Conventions
+  url: conventions/crossing-minds-conventions.yml
+- type: Conformance
+  url: conformance/crossing-minds-conformance.yml
+- type: DataModel
+  url: data-model/crossing-minds-data-model.yml
+- type: Sandbox
+  url: sandbox/crossing-minds-sandbox.yml
+- type: Packages
+  url: packages/crossing-minds-packages.yml
+- type: SDKs
+  url: packages/crossing-minds-packages.yml
+- type: MCPServer
+  url: mcp/crossing-minds-mcp.yml
+- type: LLMsTxt
+  url: llms/crossing-minds-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

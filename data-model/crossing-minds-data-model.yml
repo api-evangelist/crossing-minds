@@ -1,0 +1,46 @@
+generated: '2026-07-18'
+method: derived
+source: https://docs.api.crossingminds.com/endpoints/index.html
+notes: >-
+  Entity graph derived from the documented endpoint categories of the Crossing
+  Minds B2B Recommendation API. No OpenAPI is published, so relationships are
+  read from the resource hierarchy in the endpoint reference, not from $ref links.
+entities:
+  - name: Organization
+    description: Top-level account that owns databases and login accounts.
+  - name: Database
+    description: An isolated dataset (users, items, ratings, interactions) an org can create many of.
+    relationships:
+      - belongs_to: Organization
+  - name: User
+    description: An end user / profile in a database, with typed properties.
+    relationships:
+      - belongs_to: Database
+  - name: Item
+    description: A recommendable item (product/content) in a database, with typed properties.
+    relationships:
+      - belongs_to: Database
+  - name: Rating
+    description: An explicit user rating of an item.
+    relationships:
+      - belongs_to: Database
+      - has_one: User
+      - has_one: Item
+  - name: Interaction
+    description: An implicit user/session interaction event on an item (e.g. purchase, view).
+    relationships:
+      - belongs_to: Database
+      - has_one: User
+      - has_one: Item
+  - name: Recommendation
+    description: Ranked items returned for a profile, session, or item-to-item query.
+    relationships:
+      - has_many: Item
+  - name: Scenario
+    description: A named recommendation configuration (with a default) applied to recommendation calls.
+    relationships:
+      - belongs_to: Database
+  - name: BackgroundTask
+    description: An asynchronous processing job (e.g. model recompute) triggered against a database.
+    relationships:
+      - belongs_to: Database

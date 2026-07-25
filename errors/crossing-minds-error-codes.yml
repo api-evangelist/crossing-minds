@@ -1,0 +1,64 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.api.crossingminds.com/errors.html
+docs: https://docs.api.crossingminds.com/errors.html
+format: custom-json
+envelope:
+  fields:
+    error_code: Numeric Crossing Minds error code (stable across HTTP statuses)
+    error_name: Machine-readable error name
+    message: Human-readable description
+    error_data: Object with contextual detail (type, key, name, error, retry_after)
+  example: |
+    {
+      "error_code": 60,
+      "error_name": "NotFoundError",
+      "message": "Some resource does not exist",
+      "error_data": { "name": "user", "key": "id", "type": "User" }
+    }
+errors:
+  - error_code: 0
+    error_name: ServerError
+    http_status: [500, 502]
+    message: The server encountered an internal error.
+  - error_code: 1
+    error_name: ServerUnavailable
+    http_status: [503]
+    message: The server is currently unavailable, please try again later.
+  - error_code: 2
+    error_name: TooManyRequests
+    http_status: [429]
+    message: Request volume exceeds subscription limits.
+    error_data: [retry_after]
+  - error_code: 21
+    error_name: AuthError
+    http_status: [401]
+    message: Authentication failed (wrong password, unverified account, etc.).
+  - error_code: 22
+    error_name: JwtTokenExpired
+    http_status: [401]
+    message: The JWT token has expired.
+  - error_code: 28
+    error_name: RefreshTokenExpired
+    http_status: [401]
+    message: The refresh token has expired.
+  - error_code: 40
+    error_name: WrongData
+    http_status: [400]
+    message: There is an error in the submitted data.
+  - error_code: 42
+    error_name: DuplicatedError
+    http_status: [400]
+    message: Some resource is duplicated.
+  - error_code: 50
+    error_name: ForbiddenError
+    http_status: [403]
+    message: You do not have enough permissions to access this resource.
+  - error_code: 60
+    error_name: NotFoundError
+    http_status: [404]
+    message: Some resource does not exist.
+  - error_code: 70
+    error_name: MethodNotAllowed
+    http_status: [405]
+    message: The HTTP method is not allowed.

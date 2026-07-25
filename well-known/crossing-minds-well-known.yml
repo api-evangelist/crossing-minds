@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: probe
+notes: >-
+  Probed the standard /.well-known/ discovery surface on the API host and the
+  marketing host. No discovery documents are published (all 404). Recorded for
+  auditability; absence is valid data. No WellKnown/SecurityTxt pointer is wired
+  because nothing returned 200.
+hosts:
+  - host: https://api.crossingminds.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /openapi.json
+        status: 404
+      - path: /swagger.json
+        status: 404
+  - host: https://www.crossingminds.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404

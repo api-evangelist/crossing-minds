@@ -1,0 +1,43 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: https://docs.api.crossingminds.com/endpoints/index.html
+notes: >-
+  No official hosted/remote MCP server is published by Crossing Minds. This is a
+  CANDIDATE tool surface derived from the documented endpoint categories of the
+  B2B Recommendation API, for a future MCP wrapper. Not an authoritative provider
+  claim; no OpenAPI operationIds exist to bind these to.
+server:
+  name: crossing-minds
+  transport: http
+tools:
+  - name: create_database
+    description: Create a new recommendation database.
+    source_operation: docs:Databases#create
+  - name: list_databases
+    description: List all databases for the account.
+    source_operation: docs:Databases#list
+  - name: bulk_upsert_users
+    description: Create or update users with properties in bulk.
+    source_operation: docs:Users#bulk
+  - name: bulk_upsert_items
+    description: Create or update items with properties in bulk.
+    source_operation: docs:Items#bulk
+  - name: create_rating
+    description: Create or update one user rating of an item.
+    source_operation: docs:Ratings#create
+  - name: create_interaction
+    description: Record a user or session interaction on an item.
+    source_operation: docs:Interactions#create
+  - name: recommend_profile_to_items
+    description: Get profile-based item recommendations for a user.
+    source_operation: docs:Recommendation#profile-to-items
+  - name: recommend_session_to_items
+    description: Get session-based item recommendations (no user_id required).
+    source_operation: docs:Recommendation#session-to-items
+  - name: recommend_item_to_items
+    description: Get similar-item recommendations for a given item.
+    source_operation: docs:Recommendation#item-to-items
+  - name: trigger_background_task
+    description: Trigger an asynchronous background task on a database.
+    source_operation: docs:BackgroundTasks#trigger

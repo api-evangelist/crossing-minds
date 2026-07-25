@@ -1,0 +1,28 @@
+# Crossing Minds
+
+> Crossing Minds is an AI personalization and recommendation company. Its B2B
+> Recommendation API delivers profile-to-items, session-to-items and
+> item-to-items recommendations from user ratings and interactions, with JWT
+> authentication and multi-database, multi-tenant accounts. First-party SDKs
+> ship for Python, Node.js, .NET, Java, Ruby, PHP and browser JavaScript. The
+> team joined OpenAI; the API, docs, SDKs and status page remain online.
+
+## APIs
+- [Crossing Minds Recommendation API docs](https://docs.api.crossingminds.com/): B2B universal recommendation API (v1.0.0), JWT auth
+- [Endpoint reference](https://docs.api.crossingminds.com/endpoints/index.html): databases, users, items, ratings, interactions, recommendations, scenarios, background tasks
+- [Authentication](https://docs.api.crossingminds.com/authentication.html): JWT bearer + refresh token, individual/service/SAML login
+- [Error handling](https://docs.api.crossingminds.com/errors.html): custom error_code/error_name envelope
+
+## SDKs
+- [xminds (Python, PyPI)](https://pypi.org/project/xminds/)
+- [xminds-sdk-nodejs (npm)](https://www.npmjs.com/package/xminds-sdk-nodejs)
+- [XMinds (.NET, NuGet)](https://www.nuget.org/packages/XMinds)
+- [xminds-java](https://github.com/Crossing-Minds/xminds-java)
+- [xminds-ruby](https://github.com/Crossing-Minds/xminds-ruby)
+- [xminds-php](https://github.com/Crossing-Minds/xminds-php)
+
+## Docs
+- [Company site](https://www.crossingminds.com/)
+- [GitHub organization](https://github.com/Crossing-Minds)
+- [Status page](https://status.crossingminds.com/)
+- [Python data-science library docs](https://xminds.readthedocs.io/en/latest/)

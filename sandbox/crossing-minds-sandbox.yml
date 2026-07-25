@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/Crossing-Minds/xminds-nodejs
+docs: https://docs.api.crossingminds.com/
+environments:
+  - name: production
+    host: https://api.crossingminds.com
+    default: true
+  - name: staging
+    host: https://staging-api.crossingminds.com
+    purpose: >-
+      Pre-production/staging environment documented in the official SDKs; the
+      client host is overridable so integrations can point at staging before
+      going live.
+test_values:
+  notes: >-
+    Crossing Minds publishes no static magic test identifiers or test cards.
+    Sandboxing is done by pointing an SDK at the staging host and by isolating
+    work in a dedicated test database (each account can create multiple
+    databases via the Databases endpoints).
+isolation:
+  mechanism: per-database
+  notes: Create a throwaway database (Create New Database) to test ingestion, ratings and recommendations without touching a production database.

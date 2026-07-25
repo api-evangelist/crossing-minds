@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.api.crossingminds.com/
+docs: https://docs.api.crossingminds.com/
+authentication:
+  style: JWT bearer (RFC 6750)
+  header: 'Authorization: Bearer <JWT_TOKEN>'
+  ref: authentication/crossing-minds-authentication.yml
+idempotency:
+  supported: false
+  notes: No idempotency-key header or contract is documented; bulk write endpoints are upsert-style (create-or-update).
+pagination:
+  style: cursor
+  notes: >-
+    List endpoints (ratings, background tasks, bulk data reads) page with an
+    amount/limit plus a cursor returned by the server; exact parameter names are
+    per-endpoint in the reference.
+versioning:
+  style: api-version
+  current: v1.0.0
+error_envelope:
+  shape: '{ error_code, error_name, message, error_data }'
+  ref: errors/crossing-minds-error-codes.yml
+rate_limit_signaling:
+  mechanism: HTTP 429 TooManyRequests (error_code 2) with retry_after in error_data
+  notes: Limits are tied to the subscription plan.
+multi_tenancy:
+  notes: >-
+    Every request is scoped to an organization account and a specific database
+    (db_id/db_name), selectable at login and encoded in the JWT.
+frontend_scoping:
+  notes: >-
+    Frontend-role tokens narrow permissions to a single frontend_user_id or
+    frontend_session_id, supporting client-side/session recommendation calls.

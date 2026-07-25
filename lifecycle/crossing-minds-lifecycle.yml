@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.api.crossingminds.com/
+versioning:
+  scheme: api-version
+  current: v1.0.0
+  docs: https://docs.api.crossingminds.com/
+deprecation:
+  policy_url: https://docs.api.crossingminds.com/endpoints/index.html
+  notes: >-
+    The endpoint reference marks per-item and per-user individual management
+    endpoints as deprecated in favor of bulk data-and-properties endpoints for
+    users and items. No dated Sunset/Deprecation header policy (RFC 8594) is
+    published.
+  sunset_header: false
+status_page: https://status.crossingminds.com/
+status_provider: Better Stack
+sla:
+  url: https://status.crossingminds.com/
+  observed_uptime: "100% (trailing 90 days, as of 2026-07-18)"
+deprecated_operations:
+  - Individual (single) user create/update/delete endpoints (superseded by bulk user data-and-properties endpoints)
+  - Individual (single) item create/update/delete endpoints (superseded by bulk item data-and-properties endpoints)

@@ -1,0 +1,57 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/Crossing-Minds
+notes: >-
+  First-party client libraries for the Crossing Minds B2B Recommendation API,
+  published by the Crossing-Minds GitHub organization. Python, Node.js and .NET
+  are published to public registries; Java, Ruby, PHP and browser-JavaScript
+  clients are distributed as source from the GitHub org.
+packages:
+  - language: python
+    registry: pypi
+    name: xminds
+    url: https://pypi.org/project/xminds/
+    source: https://github.com/Crossing-Minds/xminds-python
+    install: pip install xminds
+    version: 0.7.0
+    official: true
+  - language: javascript
+    registry: npm
+    name: xminds-sdk-nodejs
+    url: https://www.npmjs.com/package/xminds-sdk-nodejs
+    source: https://github.com/Crossing-Minds/xminds-nodejs
+    install: npm install xminds-sdk-nodejs
+    version: 2.8.0
+    official: true
+  - language: dotnet
+    registry: nuget
+    name: XMinds
+    url: https://www.nuget.org/packages/XMinds
+    source: https://github.com/Crossing-Minds/xminds-dotnet
+    install: dotnet add package XMinds
+    version: 0.0.8
+    official: true
+  - language: java
+    registry: github
+    name: xminds-java
+    url: https://github.com/Crossing-Minds/xminds-java
+    source: https://github.com/Crossing-Minds/xminds-java
+    official: true
+  - language: ruby
+    registry: github
+    name: xminds-ruby
+    url: https://github.com/Crossing-Minds/xminds-ruby
+    source: https://github.com/Crossing-Minds/xminds-ruby
+    official: true
+  - language: php
+    registry: github
+    name: xminds-php
+    url: https://github.com/Crossing-Minds/xminds-php
+    source: https://github.com/Crossing-Minds/xminds-php
+    official: true
+  - language: javascript
+    registry: github
+    name: xminds-javascript
+    url: https://github.com/Crossing-Minds/xminds-javascript
+    source: https://github.com/Crossing-Minds/xminds-javascript
+    official: true

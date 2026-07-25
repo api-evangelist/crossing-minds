@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.api.crossingminds.com/
+standards:
+  - id: rfc6750-bearer-token
+    conforms: true
+    evidence: Authentication uses Authorization Bearer JWT per RFC 6750.
+  - id: jwt-rfc7519
+    conforms: true
+    evidence: Short-lived JSON Web Tokens issued at login and refreshed via refresh-token.
+  - id: saml-sso
+    conforms: true
+    evidence: login/sso/saml/sp/ supports SAML SSO (OKTA).
+  - id: oauth2
+    conforms: false
+    evidence: Auth is JWT login + refresh token, not OAuth 2.0 authorization flows.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors use a custom {error_code,error_name,message,error_data} envelope, not application/problem+json.
+  - id: rate-limit-signaling
+    conforms: true
+    evidence: HTTP 429 TooManyRequests with retry_after.
+  - id: rest-http
+    conforms: true
+    evidence: Docs state standard HTTP response codes and verbs.
