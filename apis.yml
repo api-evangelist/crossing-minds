@@ -53,7 +53,7 @@ tags:
 - Ai Ml
 - Recommendations
 - Personalization
-- Machine-Learning
+- Machine Learning
 - Recommender System
 - Retrieval
 - E-Commerce
@@ -66,6 +66,7 @@ tags_raw:
 - Recommender System
 - Retrieval
 - Ecommerce
+- Machine-Learning
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -82,11 +83,12 @@ apis:
   tags:
   - Recommendations
   - Personalization
-  - Machine-Learning
+  - Machine Learning
   tags_raw:
   - Recommendations
   - Personalization
   - Machine Learning
+  - Machine-Learning
   properties:
   - type: Documentation
     url: https://docs.api.crossingminds.com/
