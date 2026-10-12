@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/crossing-minds/integrations
+- https://n8n.io/integrations/crossing-minds/
+- https://composio.dev/toolkits/crossing-minds
+- https://monid.ai/tools/crossing-minds
+checked:
+- https://composio.dev/toolkits/crossing-minds
+- https://monid.ai/tools/crossing-minds
+- https://n8n.io/integrations/crossing-minds/
+- https://zapier.com/apps/crossing-minds/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
