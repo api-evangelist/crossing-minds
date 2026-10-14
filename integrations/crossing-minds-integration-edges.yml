@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/crossing-minds/integrations
 - https://n8n.io/integrations/crossing-minds/
@@ -7,10 +7,57 @@ source:
 - https://monid.ai/tools/crossing-minds
 checked:
 - https://composio.dev/toolkits/crossing-minds
+- https://docs.mparticle.com/integrations/crossing-minds/event/
 - https://monid.ai/tools/crossing-minds
 - https://n8n.io/integrations/crossing-minds/
+- https://www.twilio.com/docs/segment/connections/destinations/catalog/crossing-minds
 - https://zapier.com/apps/crossing-minds/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: Twilio Segment
+  partner: segment
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://www.twilio.com/docs/segment/connections/destinations/catalog/crossing-minds
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - crossing-minds
+      status: PUBLIC
+      partner_owned: true
+      connection_modes:
+      - cloud:mobile
+      - cloud:server
+      - cloud:web
+      accepted_methods:
+      - Identify
+      - Track
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
+- partner_name: mParticle
+  partner: mparticle
+  partner_match: aggregator
+  marketplace: coverage
+  channel: partner-built
+  direction: partner-built
+  type: coverage
+  relationship: connector-coverage
+  evidence: https://docs.mparticle.com/integrations/crossing-minds/event/
+  coverage_role:
+  - destination
+  cdp_signals:
+    destination:
+      catalog_entries:
+      - crossing-minds
+      integration_types:
+      - event
+  detected_by: sweep-cdp.py
+  first_seen: '2026-10-14'
 templates: []
