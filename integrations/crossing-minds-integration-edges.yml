@@ -6,10 +6,17 @@ source:
 - https://composio.dev/toolkits/crossing-minds
 - https://monid.ai/tools/crossing-minds
 checked:
+- https://api.nuget.org/v3
 - https://composio.dev/toolkits/crossing-minds
+- https://crates.io/api/v1
 - https://docs.mparticle.com/integrations/crossing-minds/event/
 - https://monid.ai/tools/crossing-minds
 - https://n8n.io/integrations/crossing-minds/
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/crossing-minds
 - https://zapier.com/apps/crossing-minds/integrations
 - shopify/integrations/shopify-integration-edges.yml
@@ -79,4 +86,94 @@ edges:
   detected_by: mirror-platform-listings.py
   publisher_verified:
   - Built for Shopify
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/xminds-sdk-nodejs
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: xminds-sdk-nodejs
+      version: 2.8.0
+      released: '2023-02-28'
+      released_field: modified
+      lapsed: true
+      page: https://www.npmjs.com/package/xminds-sdk-nodejs
+      repo_leg: github-org:crossing-minds
+      publisher_leg: email:crossingminds.com
+      matched_by: domain
+    current: false
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+- partner_name: NuGet Gallery
+  partner: nuget
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (.NET)
+  evidence: https://www.nuget.org/packages/XMinds
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: NuGet Gallery (public registry JSON)
+    spec_file: null
+    language: .NET
+    packages:
+    - name: XMinds
+      version: 0.0.8
+      released: '2020-11-25'
+      released_field: published
+      lapsed: true
+      page: https://www.nuget.org/packages/XMinds
+      repo_leg: domain:crossingminds.com
+      publisher_leg: org:crossingminds
+      matched_by: domain
+    current: false
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+- partner_name: PyPI
+  partner: pypi
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Python)
+  evidence: https://pypi.org/project/xminds/
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: PyPI (public registry JSON)
+    spec_file: null
+    language: Python
+    packages:
+    - name: xminds
+      version: 0.7.0
+      released: '2024-05-29'
+      released_field: upload_time
+      lapsed: true
+      page: https://pypi.org/project/xminds/
+      repo_leg: github-org:crossing-minds
+      publisher_leg: email:crossingminds.com
+      matched_by: domain
+    current: false
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 templates: []
